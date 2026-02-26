@@ -35,7 +35,7 @@ const services = [
   },
   {
     icon: Building2, title: "Property Accounting & Service Charges", color: "text-secondary", bg: "bg-secondary/10",
-    desc: "We handle property financials including landlord accounts, service charge reconciliations, backlog clearance, year-end statements and management reports.",
+    desc: "We provide full property finance support including service charge reconciliations, backlog clearance, landlord income and expense reporting, rent invoicing, credit control and accounts payable processing — ensuring accurate, compliant and well-managed property accounts.",
     who: "Landlords, property managers and management companies who need structured property accounts, improved cashflow control and reliable financial reporting.",
     provide: "Tenancy agreements, rental income records, maintenance invoices and service charge budgets.",
   },
