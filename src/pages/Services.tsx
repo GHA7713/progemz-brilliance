@@ -35,7 +35,7 @@ const services = [
   },
   {
     icon: Building2, title: "Property Accounting & Service Charges", color: "text-secondary", bg: "bg-secondary/10",
-    desc: "We handle property financials including landlord accounts, service charge budgets, year-end statements and management reports.",
+    desc: "We handle property financials including landlord accounts, service charge reconciliations, backlog clearance, year-end statements and management reports.",
     who: "Landlords, property managers and management companies who need clear, compliant property accounts.",
     provide: "Tenancy agreements, rental income records, maintenance invoices and service charge budgets.",
   },
