@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import Upload from "./pages/Upload";
+
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Login from "./pages/Login";
@@ -27,7 +27,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/upload" element={<Upload />} />
+            
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
