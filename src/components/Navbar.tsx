@@ -9,8 +9,6 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/services" },
   { label: "About", path: "/about" },
-  { label: "Upload", path: "/upload" },
-  { label: "Dashboard", path: "/login" },
 ];
 
 const Navbar = () => {
@@ -46,7 +44,7 @@ const Navbar = () => {
             <Button variant="outline" size="sm" onClick={() => setContactOpen(true)}>
               Contact Us
             </Button>
-            <Link to="/upload">
+            <Link to="/contact">
               <Button size="sm">Get Started</Button>
             </Link>
           </div>
