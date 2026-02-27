@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Gem, Mail, Phone, MapPin } from "lucide-react";
+import { Gem, Mail, MapPin } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-border bg-muted/40">
@@ -29,14 +29,12 @@ const Footer = () => (
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-primary transition-colors">About</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-            <li><Link to="/login" className="hover:text-primary transition-colors">Client Dashboard</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="font-heading font-semibold mb-3 text-foreground">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> hello@progemz.co.uk</li>
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> +44 20 1234 5678</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> London, United Kingdom</li>
           </ul>
         </div>

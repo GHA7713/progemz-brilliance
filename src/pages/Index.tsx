@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   BookOpen, Receipt, HardHat, Users, Building2,
-  Upload, FileCheck, BarChart3, Star, ArrowRight, PhoneCall
+  FileCheck, BarChart3, Star, ArrowRight, PhoneCall, MessageSquare, ClipboardList
 } from "lucide-react";
 import heroImage from "@/assets/hero-illustration.png";
 
@@ -21,8 +21,8 @@ const services = [
 ];
 
 const steps = [
-  { icon: Upload, title: "Upload your documents", desc: "Send us your invoices, bank statements and receipts through our secure portal." },
-  { icon: FileCheck, title: "We organise & process", desc: "Our team categorises everything and prepares your accounts accurately." },
+  { icon: MessageSquare, title: "Get in touch", desc: "Tell us about your business and what support you need." },
+  { icon: ClipboardList, title: "We organise & process", desc: "Our team categorises everything and prepares your accounts accurately." },
   { icon: BarChart3, title: "Clear reports & support", desc: "You get easy-to-read reports and ongoing support whenever you need it." },
 ];
 
@@ -47,14 +47,14 @@ const Index = () => (
             Bookkeeping, payroll, VAT, CIS & property accounting – done properly, without the jargon.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
-            <Link to="/upload">
+            <Link to="/contact">
               <Button size="lg" className="shadow-button">
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                Book a Free Call <PhoneCall className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/services">
               <Button size="lg" variant="outline">
-                Contact Us
+                Our Services <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
@@ -144,16 +144,11 @@ const Index = () => (
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">Ready to simplify your finances?</h2>
           <p className="mt-3 text-muted-foreground max-w-md mx-auto">
-            Upload your documents or book a free 15-minute call. No commitment, no jargon.
+            Book a free 15-minute call. No commitment, no jargon.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link to="/upload">
-              <Button size="lg" className="shadow-button">
-                <Upload className="mr-2 h-4 w-4" /> Upload Your Documents
-              </Button>
-            </Link>
+          <div className="mt-8 flex justify-center">
             <Link to="/contact">
-              <Button size="lg" variant="outline">
+              <Button size="lg" className="shadow-button">
                 <PhoneCall className="mr-2 h-4 w-4" /> Book a Free Call
               </Button>
             </Link>
