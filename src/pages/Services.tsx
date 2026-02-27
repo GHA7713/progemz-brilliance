@@ -74,18 +74,11 @@ const ServicesPage = () => (
                   <h4 className="font-heading text-sm font-semibold text-foreground mb-1">Who is this for?</h4>
                   <p className="text-sm text-muted-foreground">{s.who}</p>
                 </div>
-                <div className="rounded-lg bg-muted/60 p-4">
-                  <h4 className="font-heading text-sm font-semibold text-foreground mb-1">What you'll need to provide</h4>
-                  <p className="text-sm text-muted-foreground">{s.provide}</p>
-                </div>
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-6">
                 <Link to="/contact">
                   <Button>Enquire <ArrowRight className="ml-2 h-4 w-4" /></Button>
-                </Link>
-                <Link to="/upload">
-                  <Button variant="outline">Upload Docs</Button>
                 </Link>
               </div>
             </div>
