@@ -39,13 +39,13 @@ const Index = () =>
       <div className="container mx-auto flex flex-col-reverse items-center gap-8 px-4 py-16 md:flex-row md:py-24">
         <motion.div className="flex-1 text-center md:text-left" initial="hidden" animate="visible" variants={fadeUp} custom={0}>
           <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Simple, stress-free business support for{" "}
+            Simple, stress-free accounting for{" "}
             <span className="text-primary">small businesses</span> &{" "}
             <span className="text-secondary">property owners</span>
           </h1>
-          <p className="mt-4 max-w-lg text-lg text-muted-foreground md:text-xl">
-            Bookkeeping for businesses and freelancers, property financial management, service charge reconciliations, VAT returns, CIS support and payroll — structured, clear and reliable.
-          </p>
+          <p className="mt-4 max-w-lg text-lg text-muted-foreground md:text-xl">Bookkeeping for businesses and freelancers, property financial management, service charge reconciliations, VAT returns, CIS and payroll — structured, clear and reliable.
+
+        </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
             <Link to="/contact">
               <Button size="lg" className="shadow-button">
