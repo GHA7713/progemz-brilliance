@@ -13,11 +13,13 @@ const fadeUp = {
 };
 
 const services = [
-{ icon: BookOpen, title: "Bookkeeping & Bank Reconciliations", desc: "Accurate records, reconciled accounts, and organised finances every month.", color: "text-primary", bg: "bg-primary/10" },
-{ icon: Receipt, title: "VAT & MTD Support", desc: "Making Tax Digital compliant VAT returns filed on time, every time.", color: "text-secondary", bg: "bg-secondary/10" },
-{ icon: HardHat, title: "CIS (Construction Tax)", desc: "CIS deductions, returns and statements handled for contractors and subcontractors.", color: "text-accent", bg: "bg-accent/10" },
-{ icon: Users, title: "Payroll & Payslips", desc: "Pay your team on time with RTI-compliant payroll and professional payslips.", color: "text-primary", bg: "bg-primary/10" },
-{ icon: Building2, title: "Property Accounting", desc: "Service charge management, landlord accounts and property financials sorted.", color: "text-secondary", bg: "bg-secondary/10" }];
+{ icon: BookOpen, title: "Bookkeeping", desc: "Accurate records, reconciled accounts, and organised finances every month.", color: "text-primary", bg: "bg-primary/10" },
+{ icon: Receipt, title: "VAT & MTD", desc: "Making Tax Digital compliant VAT returns filed on time, every time.", color: "text-secondary", bg: "bg-secondary/10" },
+{ icon: HardHat, title: "CIS", desc: "CIS deductions, returns and statements handled for contractors and subcontractors.", color: "text-accent", bg: "bg-accent/10" },
+{ icon: Users, title: "Payroll", desc: "Pay your team on time with RTI-compliant payroll and professional payslips.", color: "text-primary", bg: "bg-primary/10" },
+{ icon: Building2, title: "Property Accounting", desc: "Service charge management, landlord accounts and property financials sorted.", color: "text-secondary", bg: "bg-secondary/10" },
+{ icon: FileCheck, title: "Service Charge Reconciliations", desc: "Transparent reconciliations and backlog clearance for property managers.", color: "text-accent", bg: "bg-accent/10" },
+];
 
 const steps = [
 { icon: MessageSquare, title: "Enquire", desc: "Tell us about your business, your workload and the support you need. We'll review your requirements and confirm how we can help." },

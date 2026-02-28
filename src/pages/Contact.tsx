@@ -16,8 +16,9 @@ const businessTypes = [
 ];
 
 const services = [
-  "Bookkeeping & Bank Reconciliation",
-  "VAT Returns",
+  "Bookkeeping",
+  "VAT & MTD",
+  "CIS",
   "Payroll",
   "Property Accounting",
   "Service Charge Reconciliations",

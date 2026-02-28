@@ -22,6 +22,7 @@ const Footer = () => (
             <li><Link to="/services" className="hover:text-primary transition-colors">CIS</Link></li>
             <li><Link to="/services" className="hover:text-primary transition-colors">Payroll</Link></li>
             <li><Link to="/services" className="hover:text-primary transition-colors">Property Accounting</Link></li>
+            <li><Link to="/services" className="hover:text-primary transition-colors">Service Charge Reconciliations</Link></li>
           </ul>
         </div>
         <div>
