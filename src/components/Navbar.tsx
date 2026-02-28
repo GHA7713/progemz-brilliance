@@ -2,18 +2,18 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Gem } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ContactModal from "./ContactModal";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/services" },
   { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
+  
   const location = useLocation();
 
   return (
@@ -44,9 +44,6 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" size="sm" onClick={() => setContactOpen(true)}>
-              Contact Us
-            </Button>
             <Link to="/contact">
               <Button size="sm">Enquire Now</Button>
             </Link>
@@ -80,15 +77,15 @@ const Navbar = () => {
                     {item.label}
                   </Link>
                 ))}
-                <Button className="mt-2" onClick={() => { setContactOpen(true); setMobileOpen(false); }}>
-                  Contact Us
-                </Button>
+                <Link to="/contact" onClick={() => setMobileOpen(false)}>
+                  <Button className="mt-2 w-full">Enquire Now</Button>
+                </Link>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
-      <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
+      
     </>
   );
 };
