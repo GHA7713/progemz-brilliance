@@ -20,9 +20,12 @@ const Navbar = () => {
     <>
       <nav className="sticky top-0 z-50 border-b border-border bg-card/80 backdrop-blur-lg">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <Link to="/" className="flex items-center gap-2 font-heading text-xl font-bold text-foreground">
+          <Link to="/" className="flex items-center gap-2">
             <Gem className="h-7 w-7 text-primary" />
-            <span>Pro<span className="text-primary">Gemz</span></span>
+            <div>
+              <span className="font-heading text-xl font-bold text-foreground">Pro<span className="text-primary">Gemz</span></span>
+              <span className="block text-[11px] font-normal text-muted-foreground leading-tight">Finance &amp; Business Support</span>
+            </div>
           </Link>
 
           {/* Desktop */}
