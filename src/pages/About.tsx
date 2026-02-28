@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, Heart, MessageCircle, ArrowRight } from "lucide-react";
+import { ShieldCheck, Heart, MessageCircle, ArrowRight, UserCheck, MessageSquareText, CalendarCheck, Briefcase } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -12,6 +12,13 @@ const values = [
   { icon: ShieldCheck, title: "Compliance Made Easy", desc: "We keep you on the right side of HMRC, Companies House and MTD – so you never miss a deadline." },
   { icon: Heart, title: "We Actually Care", desc: "Your business is personal to you. We treat it that way too, with genuine support and honest advice." },
   { icon: MessageCircle, title: "Plain English, Always", desc: "No accountancy jargon. We explain things in a way that makes sense, so you always know where you stand." },
+];
+
+const whyChoose = [
+  { icon: UserCheck, title: "Personal, not transactional", desc: "You're not just another client. We take the time to understand your business and provide support that fits your workload and goals." },
+  { icon: MessageSquareText, title: "Clear and jargon-free", desc: "We explain everything in plain English, so you always know what's happening and why." },
+  { icon: CalendarCheck, title: "Reliable and deadline-focused", desc: "From VAT and CIS to payroll and property finance, we keep you compliant and organised — without last-minute stress." },
+  { icon: Briefcase, title: "Business and property expertise in one place", desc: "Whether you run a small business, work as a contractor or manage property, you receive practical, structured support tailored to your needs." },
 ];
 
 const AboutPage = () => (
@@ -54,7 +61,22 @@ const AboutPage = () => (
           </div>
         </motion.div>
 
-        <motion.div className="text-center pt-8" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2}>
+          <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Why Choose ProGemz?</h2>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {whyChoose.map((v, i) => (
+              <motion.div key={v.title} className="rounded-xl border border-border bg-card p-6 shadow-card text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                  <v.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-heading text-sm font-semibold text-foreground">{v.title}</h3>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div className="text-center pt-8" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}>
           <Link to="/contact">
             <Button size="lg" className="shadow-button">
               Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
