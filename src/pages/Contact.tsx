@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Send } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const businessTypes = [
   "Property Manager",
@@ -35,16 +36,38 @@ const ContactPage = () => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    const form = e.target as HTMLFormElement;
+    const formData = {
+      name: (form.querySelector("#c-name") as HTMLInputElement).value,
+      email: (form.querySelector("#c-email") as HTMLInputElement).value,
+      phone: (form.querySelector("#c-phone") as HTMLInputElement).value,
+      company: (form.querySelector("#c-company") as HTMLInputElement).value,
+      message: (form.querySelector("#c-message") as HTMLTextAreaElement).value,
+      businessType: selectedBusiness,
+      services: selectedServices,
+    };
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
       toast.success("Enquiry submitted! We'll be in touch shortly.");
-      (e.target as HTMLFormElement).reset();
+      form.reset();
       setSelectedBusiness(null);
       setSelectedServices([]);
-    }, 1000);
+    } catch (err: any) {
+      console.error("Submit error:", err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
