@@ -49,7 +49,7 @@ const Index = () =>
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
             <Link to="/contact">
               <Button size="lg" className="shadow-button">
-                Book a Free Call <PhoneCall className="ml-2 h-4 w-4" />
+                Enquire Now <MessageSquare className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Link to="/services">
@@ -149,7 +149,7 @@ const Index = () =>
           <div className="mt-8 flex justify-center">
             <Link to="/contact">
               <Button size="lg" className="shadow-button">
-                <PhoneCall className="mr-2 h-4 w-4" /> Book a Free Call
+                <MessageSquare className="mr-2 h-4 w-4" /> Enquire Now
               </Button>
             </Link>
           </div>
