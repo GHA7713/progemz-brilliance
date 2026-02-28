@@ -98,10 +98,7 @@
 
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(180deg, hsl(210 33% 98%), hsl(214 40% 94%));
-  }
-  .gradient-hero-cta {
-    background: linear-gradient(135deg, hsl(217 72% 53% / 0.06), hsl(217 72% 53% / 0.12), hsl(152 45% 48% / 0.06));
+    background: var(--gradient-hero);
   }
   .gradient-primary {
     background: var(--gradient-primary);
@@ -120,24 +117,5 @@
   }
   .shadow-button {
     box-shadow: var(--shadow-button);
-  }
-  .shadow-button-lg {
-    box-shadow: 0 4px 14px hsl(217 72% 53% / 0.3);
-  }
-  .glow-button {
-    box-shadow: 0 0 24px hsl(217 72% 53% / 0.2), 0 4px 14px hsl(217 72% 53% / 0.25);
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
   }
 }
