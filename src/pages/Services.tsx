@@ -30,7 +30,7 @@ const services = [
   {
     icon: Users, title: "Payroll & Payslips", color: "text-primary", bg: "bg-primary/10",
     desc: "We run your payroll, calculate tax and NI, issue payslips and file Real Time Information (RTI) submissions with HMRC.",
-    who: "Small employers, from one employee up, who need reliable and compliant payroll processing.",
+    who: "Small employers, from one employee upwards, who need reliable and compliant payroll processing.",
     provide: "Employee details, salary information, hours worked and any changes such as starters or leavers.",
   },
   {
