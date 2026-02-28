@@ -20,7 +20,7 @@ const services = [
   "VAT Returns",
   "Payroll",
   "Property Accounting",
-  "Service Charge Reconciliations (TTC)",
+  "Service Charge Reconciliations",
 ];
 
 const ContactPage = () => {
