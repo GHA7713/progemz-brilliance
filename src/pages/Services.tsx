@@ -10,34 +10,34 @@ const fadeUp = {
 
 const services = [
   {
-    icon: BookOpen, title: "Bookkeeping & Bank Reconciliations", color: "text-primary", bg: "bg-primary/10",
+    icon: BookOpen, title: "Bookkeeping", color: "text-primary", bg: "bg-primary/10",
     desc: "We keep your books accurate and up to date, reconciling every transaction so you always know where your money stands.",
     who: "Sole traders, freelancers and small businesses who want someone reliable to manage their day-to-day finances.",
-    provide: "Bank statements, sales invoices, purchase receipts and access to your accounting software (if applicable).",
   },
   {
-    icon: Receipt, title: "VAT & Making Tax Digital (MTD)", color: "text-secondary", bg: "bg-secondary/10",
+    icon: Receipt, title: "VAT & MTD", color: "text-secondary", bg: "bg-secondary/10",
     desc: "We prepare and submit your VAT returns on time, in line with HMRC's Making Tax Digital (MTD) requirements.",
     who: "VAT-registered businesses looking for accurate, hassle-free returns and MTD compliance.",
-    provide: "Sales and purchase invoices, bank statements and details of any expenses for the quarter.",
   },
   {
-    icon: HardHat, title: "CIS (Construction Industry Scheme)", color: "text-accent", bg: "bg-accent/10",
+    icon: HardHat, title: "CIS", color: "text-accent", bg: "bg-accent/10",
     desc: "We manage CIS deductions, monthly returns and verification for contractors and subcontractors in the construction industry.",
     who: "Construction contractors and subcontractors who need CIS returns filed correctly and on time.",
-    provide: "Subcontractor payment details, UTRs and any CIS statements received from contractors.",
   },
   {
-    icon: Users, title: "Payroll & Payslips", color: "text-primary", bg: "bg-primary/10",
+    icon: Users, title: "Payroll", color: "text-primary", bg: "bg-primary/10",
     desc: "We run your payroll, calculate tax and NI, issue payslips and file Real Time Information (RTI) submissions with HMRC.",
     who: "Small employers, from one employee upwards, who need reliable and compliant payroll processing.",
-    provide: "Employee details, salary information, hours worked and any changes such as starters or leavers.",
   },
   {
-    icon: Building2, title: "Property Accounting & Service Charges", color: "text-secondary", bg: "bg-secondary/10",
+    icon: Building2, title: "Property Accounting", color: "text-secondary", bg: "bg-secondary/10",
     desc: "We provide full property finance support including service charge reconciliations, backlog clearance, landlord income and expense reporting, rent invoicing, credit control and accounts payable processing — ensuring accurate, compliant and well-managed property accounts.",
     who: "Landlords, property managers and management companies who need structured property accounts, improved cashflow control and reliable financial reporting.",
-    provide: "Tenancy agreements, rental income records, maintenance invoices and service charge budgets.",
+  },
+  {
+    icon: Building2, title: "Service Charge Reconciliations", color: "text-accent", bg: "bg-accent/10",
+    desc: "We reconcile service charge accounts, clear backlogs and ensure transparent reporting for landlords, property managers and management companies.",
+    who: "Property managers and management companies who need accurate, compliant service charge accounts.",
   },
 ];
 
