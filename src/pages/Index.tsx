@@ -27,10 +27,10 @@ const steps = [
 
 
 const audiences = [
-{ icon: Briefcase, title: "Small Businesses", desc: "Structured finance support to help you stay organised, compliant and focused on growth.", color: "text-primary", bg: "bg-primary/10" },
-{ icon: HardHat, title: "Contractors", desc: "Reliable CIS, VAT and payroll support — handled accurately and on time.", color: "text-secondary", bg: "bg-secondary/10" },
-{ icon: Home, title: "Property Owners", desc: "Clear reporting, service charge reconciliations and structured property finance management.", color: "text-accent", bg: "bg-accent/10" },
-{ icon: User, title: "Freelancers & Sole Traders", desc: "Simple, jargon-free support so you always understand your numbers.", color: "text-primary", bg: "bg-primary/10" }];
+{ icon: Briefcase, title: "Small Businesses", desc: "Structured finance support to keep you organised and compliant.", color: "text-primary", bg: "bg-primary/10" },
+{ icon: HardHat, title: "Contractors", desc: "Reliable CIS, VAT and payroll handled accurately and on time.", color: "text-secondary", bg: "bg-secondary/10" },
+{ icon: Home, title: "Property Owners", desc: "Clear reporting and organised property finance management.", color: "text-accent", bg: "bg-accent/10" },
+{ icon: User, title: "Freelancers & Sole Traders", desc: "Simple, jargon-free support so you understand your numbers.", color: "text-primary", bg: "bg-primary/10" }];
 
 
 const Index = () =>
@@ -115,21 +115,21 @@ const Index = () =>
     </section>
 
     {/* Who We Support */}
-    <section className="py-20">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">Who We Support</h2>
           <p className="mt-3 text-muted-foreground">Supporting businesses and property owners across the UK.</p>
         </motion.div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
           {audiences.map((a, i) =>
         <motion.div key={a.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
-        className="rounded-xl border border-border bg-card p-6 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-1">
-              <div className={`mb-4 inline-flex rounded-lg p-3 ${a.bg}`}>
-                <a.icon className={`h-6 w-6 ${a.color}`} />
+        className="group rounded-xl border border-border bg-card p-6 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1">
+              <div className={`mb-3 inline-flex rounded-lg p-3 ${a.bg} transition-colors duration-300 group-hover:bg-primary/20`}>
+                <a.icon className={`h-5 w-5 ${a.color} transition-colors duration-300 group-hover:text-primary`} />
               </div>
-              <h3 className="font-heading text-lg font-semibold text-foreground">{a.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
+              <h3 className="font-heading text-base font-semibold text-foreground">{a.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-24 group-hover:opacity-100 group-hover:mt-2">{a.desc}</p>
             </motion.div>
         )}
         </div>
