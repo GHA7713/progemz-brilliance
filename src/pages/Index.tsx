@@ -39,7 +39,7 @@ const Index = () =>
       <div className="container mx-auto flex flex-col-reverse items-center gap-8 px-4 py-16 md:flex-row md:py-24">
         <motion.div className="flex-1 text-center md:text-left" initial="hidden" animate="visible" variants={fadeUp} custom={0}>
           <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Simple, stress-free accounting and business support for{" "}
+            Simple, stress-free business support for{" "}
             <span className="text-primary">small businesses</span> &{" "}
             <span className="text-secondary">property owners</span>
           </h1>
