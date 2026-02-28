@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Gem, Mail } from "lucide-react";
 
-const Footer = () => (
-  <footer className="border-t border-border bg-muted/40">
+const Footer = () =>
+<footer className="border-t border-border bg-muted/40">
     <div className="container mx-auto px-4 py-12">
       <div className="grid gap-8 md:grid-cols-4">
         <div>
@@ -35,7 +35,7 @@ const Footer = () => (
         <div>
           <h4 className="font-heading font-semibold mb-3 text-foreground">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> hello@progemz.co.uk</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" />hello@progemz.com</li>
           </ul>
         </div>
       </div>
@@ -43,7 +43,7 @@ const Footer = () => (
         © {new Date().getFullYear()} ProGemz Business Services. All rights reserved.
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;
