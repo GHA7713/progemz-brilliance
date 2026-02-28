@@ -79,7 +79,7 @@ const AboutPage = () => (
         <motion.div className="text-center pt-8" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}>
           <Link to="/contact">
             <Button size="lg" className="shadow-button">
-              Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+              Enquire Now <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
         </motion.div>

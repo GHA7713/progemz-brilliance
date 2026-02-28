@@ -48,7 +48,7 @@ const Navbar = () => {
               Contact Us
             </Button>
             <Link to="/contact">
-              <Button size="sm">Get Started</Button>
+              <Button size="sm">Enquire Now</Button>
             </Link>
           </div>
 
