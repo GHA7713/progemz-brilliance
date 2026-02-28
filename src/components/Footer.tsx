@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
-import { Gem, Mail, MapPin } from "lucide-react";
+import { Gem, Mail } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-border bg-muted/40">
     <div className="container mx-auto px-4 py-12">
       <div className="grid gap-8 md:grid-cols-4">
         <div>
-          <Link to="/" className="flex items-center gap-2 font-heading text-lg font-bold text-foreground mb-3">
+          <Link to="/" className="flex items-center gap-2 mb-3">
             <Gem className="h-6 w-6 text-primary" />
-            Pro<span className="text-primary">Gemz</span>
+            <div>
+              <span className="font-heading text-lg font-bold text-foreground">Pro<span className="text-primary">Gemz</span></span>
+              <span className="block text-[11px] font-normal text-muted-foreground leading-tight">Finance &amp; Business Support</span>
+            </div>
           </Link>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Simple, stress-free accounting for small businesses and property owners across the UK.
@@ -35,7 +38,6 @@ const Footer = () => (
           <h4 className="font-heading font-semibold mb-3 text-foreground">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> hello@progemz.co.uk</li>
-            <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> London, United Kingdom</li>
           </ul>
         </div>
       </div>
