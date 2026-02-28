@@ -29,7 +29,7 @@ const ContactModal = ({ open, onOpenChange }: ContactModalProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="font-heading text-xl">Get in Touch</DialogTitle>
+          <DialogTitle className="font-heading text-xl">Enquire Now</DialogTitle>
           <DialogDescription>
             Drop us a message and we'll get back to you within 24 hours.
           </DialogDescription>

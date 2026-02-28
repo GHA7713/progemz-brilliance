@@ -78,7 +78,7 @@ const ServicesPage = () => (
 
               <div className="mt-6">
                 <Link to="/contact">
-                  <Button>Enquire <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  <Button>Enquire Now <ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </Link>
               </div>
             </div>
