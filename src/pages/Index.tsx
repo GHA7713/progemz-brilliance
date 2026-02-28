@@ -19,12 +19,10 @@ const services = [
 { icon: Users, title: "Payroll & Payslips", desc: "Pay your team on time with RTI-compliant payroll and professional payslips.", color: "text-primary", bg: "bg-primary/10" },
 { icon: Building2, title: "Property Accounting", desc: "Service charge management, landlord accounts and property financials sorted.", color: "text-secondary", bg: "bg-secondary/10" }];
 
-
 const steps = [
 { icon: MessageSquare, title: "Enquire", desc: "Tell us about your business, your workload and the support you need. We'll review your requirements and confirm how we can help." },
 { icon: ClipboardList, title: "We Organise & Manage", desc: "We categorise, reconcile and manage your financial records accurately — keeping everything structured, compliant and up to date." },
 { icon: BarChart3, title: "Clear Reports & Ongoing Support", desc: "You receive easy-to-understand reports and practical support, so you always know where your business stands." }];
-
 
 const audiences = [
 { icon: Briefcase, title: "Small Businesses", desc: "Structured finance support to keep you organised and compliant.", color: "text-primary", bg: "bg-primary/10" },
@@ -63,6 +61,28 @@ const Index = () =>
         <motion.div className="flex-1" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
           <img src={heroImage} alt="ProGemz Business Services illustration" className="mx-auto w-full max-w-lg animate-float" />
         </motion.div>
+      </div>
+    </section>
+
+    {/* Who We Support */}
+    <section className="py-20 bg-muted/30">
+      <div className="container mx-auto px-4">
+        <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+          <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">Who We Support</h2>
+          <p className="mt-3 text-muted-foreground">Supporting businesses and property owners across the UK.</p>
+        </motion.div>
+        <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+          {audiences.map((a, i) =>
+        <motion.div key={a.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
+        className="group rounded-xl border border-border bg-card p-6 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1">
+              <div className={`mb-3 inline-flex rounded-lg p-3 ${a.bg} transition-colors duration-300 group-hover:bg-primary/20`}>
+                <a.icon className={`h-5 w-5 ${a.color} transition-colors duration-300 group-hover:text-primary`} />
+              </div>
+              <h3 className="font-heading text-base font-semibold text-foreground">{a.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-24 group-hover:opacity-100 group-hover:mt-2">{a.desc}</p>
+            </motion.div>
+        )}
+        </div>
       </div>
     </section>
 
@@ -108,28 +128,6 @@ const Index = () =>
               <div className="mb-2 text-sm font-bold text-primary">Step {i + 1}</div>
               <h3 className="font-heading text-lg font-semibold text-foreground">{step.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{step.desc}</p>
-            </motion.div>
-        )}
-        </div>
-      </div>
-    </section>
-
-    {/* Who We Support */}
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-          <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">Who We Support</h2>
-          <p className="mt-3 text-muted-foreground">Supporting businesses and property owners across the UK.</p>
-        </motion.div>
-        <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
-          {audiences.map((a, i) =>
-        <motion.div key={a.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
-        className="group rounded-xl border border-border bg-card p-6 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1">
-              <div className={`mb-3 inline-flex rounded-lg p-3 ${a.bg} transition-colors duration-300 group-hover:bg-primary/20`}>
-                <a.icon className={`h-5 w-5 ${a.color} transition-colors duration-300 group-hover:text-primary`} />
-              </div>
-              <h3 className="font-heading text-base font-semibold text-foreground">{a.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-24 group-hover:opacity-100 group-hover:mt-2">{a.desc}</p>
             </motion.div>
         )}
         </div>
