@@ -44,7 +44,7 @@ const Index = () =>
             <span className="text-secondary">property owners</span>
           </h1>
           <p className="mt-4 max-w-lg text-lg text-muted-foreground md:text-xl">
-            Property accounting, Service Charge reconciliations, Bookkeeping, VAT, CIS and Payroll support - structured, clear and reliable.
+            Bookkeeping for businesses and freelancers, property financial management, service charge reconciliations, VAT returns, CIS support and payroll — structured, clear and reliable.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
             <Link to="/contact">
