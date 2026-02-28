@@ -13,9 +13,6 @@ const Footer = () => (
               <span className="block text-[11px] font-normal text-muted-foreground leading-tight">Finance &amp; Business Support</span>
             </div>
           </Link>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Simple, stress-free accounting for small businesses and property owners across the UK.
-          </p>
         </div>
         <div>
           <h4 className="font-heading font-semibold mb-3 text-foreground">Services</h4>
