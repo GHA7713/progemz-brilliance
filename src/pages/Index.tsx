@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   BookOpen, Receipt, HardHat, Users, Building2,
-  FileCheck, BarChart3, Star, ArrowRight, PhoneCall, MessageSquare, ClipboardList } from
+  FileCheck, BarChart3, ArrowRight, MessageSquare, ClipboardList, Briefcase, Home, User } from
 "lucide-react";
 import heroImage from "@/assets/hero-illustration.png";
 
@@ -26,10 +26,11 @@ const steps = [
 { icon: BarChart3, title: "Clear Reports & Ongoing Support", desc: "You receive easy-to-understand reports and practical support, so you always know where your business stands." }];
 
 
-const testimonials = [
-{ name: "Sarah M.", role: "Freelance Designer", text: "ProGemz made my bookkeeping so simple. I actually understand my finances now!" },
-{ name: "James T.", role: "Construction Contractor", text: "CIS used to give me headaches. These guys handle everything, no fuss." },
-{ name: "Priya K.", role: "Property Landlord", text: "Finally, an accountant who speaks my language. Professional and friendly." }];
+const audiences = [
+{ icon: Briefcase, title: "Small Businesses", desc: "Structured finance support to help you stay organised, compliant and focused on growth.", color: "text-primary", bg: "bg-primary/10" },
+{ icon: HardHat, title: "Contractors", desc: "Reliable CIS, VAT and payroll support — handled accurately and on time.", color: "text-secondary", bg: "bg-secondary/10" },
+{ icon: Home, title: "Property Owners", desc: "Clear reporting, service charge reconciliations and structured property finance management.", color: "text-accent", bg: "bg-accent/10" },
+{ icon: User, title: "Freelancers & Sole Traders", desc: "Simple, jargon-free support so you always understand your numbers.", color: "text-primary", bg: "bg-primary/10" }];
 
 
 const Index = () =>
@@ -113,25 +114,22 @@ const Index = () =>
       </div>
     </section>
 
-    {/* Testimonials */}
+    {/* Who We Support */}
     <section className="py-20">
       <div className="container mx-auto px-4">
         <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-          <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">What Our Clients Say</h2>
+          <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">Who We Support</h2>
+          <p className="mt-3 text-muted-foreground">Supporting businesses and property owners across the UK.</p>
         </motion.div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((t, i) =>
-        <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
-        className="rounded-xl border border-border bg-card p-6 shadow-card">
-
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, j) => <Star key={j} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {audiences.map((a, i) =>
+        <motion.div key={a.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
+        className="rounded-xl border border-border bg-card p-6 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-1">
+              <div className={`mb-4 inline-flex rounded-lg p-3 ${a.bg}`}>
+                <a.icon className={`h-6 w-6 ${a.color}`} />
               </div>
-              <p className="text-sm text-muted-foreground italic leading-relaxed">"{t.text}"</p>
-              <div className="mt-4 border-t border-border pt-3">
-                <p className="font-heading text-sm font-semibold text-foreground">{t.name}</p>
-                <p className="text-xs text-muted-foreground">{t.role}</p>
-              </div>
+              <h3 className="font-heading text-lg font-semibold text-foreground">{a.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
             </motion.div>
         )}
         </div>
