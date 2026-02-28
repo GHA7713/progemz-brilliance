@@ -21,9 +21,9 @@ const services = [
 
 
 const steps = [
-{ icon: MessageSquare, title: "Get in touch", desc: "Tell us about your business and what support you need." },
-{ icon: ClipboardList, title: "We organise & process", desc: "Our team categorises everything and prepares your accounts accurately." },
-{ icon: BarChart3, title: "Clear reports & support", desc: "You get easy-to-read reports and ongoing support whenever you need it." }];
+{ icon: MessageSquare, title: "Enquire", desc: "Tell us about your business, your workload and the support you need. We'll review your requirements and confirm how we can help." },
+{ icon: ClipboardList, title: "We Organise & Manage", desc: "We categorise, reconcile and manage your financial records accurately — keeping everything structured, compliant and up to date." },
+{ icon: BarChart3, title: "Clear Reports & Ongoing Support", desc: "You receive easy-to-understand reports and practical support, so you always know where your business stands." }];
 
 
 const testimonials = [
@@ -96,7 +96,7 @@ const Index = () =>
       <div className="container mx-auto px-4">
         <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">How It Works</h2>
-          <p className="mt-3 text-muted-foreground">Three simple steps to stress-free accounting.</p>
+          <p className="mt-3 text-muted-foreground">Three simple steps to structured, stress-free finance support.</p>
         </motion.div>
         <div className="grid gap-8 md:grid-cols-3">
           {steps.map((step, i) =>
