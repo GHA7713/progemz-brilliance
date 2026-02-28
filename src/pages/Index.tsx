@@ -140,7 +140,7 @@ const Index = () =>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">Ready to simplify your finances?</h2>
           <p className="mt-3 text-muted-foreground max-w-md mx-auto">
-            Book a free 15-minute call. No commitment, no jargon.
+            No commitment, no jargon — just clear, practical support.
           </p>
           <div className="mt-8 flex justify-center">
             <Link to="/contact">
