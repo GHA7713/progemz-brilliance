@@ -17,7 +17,7 @@ const services = [
   },
   {
     icon: Receipt, title: "VAT & Making Tax Digital (MTD)", color: "text-secondary", bg: "bg-secondary/10",
-    desc: "We prepare and submit your VAT returns on time, fully compliant with HMRC's Making Tax Digital requirements.",
+    desc: "We prepare and submit your VAT returns on time, in line with HMRC's Making Tax Digital (MTD) requirements.",
     who: "VAT-registered businesses looking for accurate, hassle-free returns and MTD compliance.",
     provide: "Sales and purchase invoices, bank statements and details of any expenses for the quarter.",
   },
