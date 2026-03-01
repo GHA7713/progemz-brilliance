@@ -5,24 +5,24 @@ import { ShieldCheck, Heart, MessageCircle, ArrowRight, UserCheck, MessageSquare
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } })
+  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
 
 const values = [
-{ icon: ShieldCheck, title: "Compliance Made Easy", desc: "We keep you on the right side of HMRC, Companies House and MTD – so you never miss a deadline." },
-{ icon: Heart, title: "We Actually Care", desc: "Your business is personal to you. We treat it that way too, with genuine support and honest advice." },
-{ icon: MessageCircle, title: "Plain English, Always", desc: "No accountancy jargon. We explain things in a way that makes sense, so you always know where you stand." }];
-
+  { icon: ShieldCheck, title: "Compliance Made Easy", desc: "We keep you on the right side of HMRC, Companies House and MTD – so you never miss a deadline." },
+  { icon: Heart, title: "We Actually Care", desc: "Your business is personal to you. We treat it that way too, with genuine support and honest advice." },
+  { icon: MessageCircle, title: "Plain English, Always", desc: "No accountancy jargon. We explain things in a way that makes sense, so you always know where you stand." },
+];
 
 const whyChoose = [
-{ icon: UserCheck, title: "Personal, not transactional", desc: "You're not just another client. We take the time to understand your business and provide support that fits your workload and goals." },
-{ icon: MessageSquareText, title: "Clear and jargon-free", desc: "We explain everything in plain English, so you always know what's happening and why." },
-{ icon: CalendarCheck, title: "Reliable and deadline-focused", desc: "From VAT and CIS to payroll and property finance, we keep you compliant and organised — without last-minute stress." },
-{ icon: Briefcase, title: "Business and property expertise in one place", desc: "Whether you run a small business, work as a contractor or manage property, you receive practical, structured support tailored to your needs." }];
+  { icon: UserCheck, title: "Personal, not transactional", desc: "You're not just another client. We take the time to understand your business and provide support that fits your workload and goals." },
+  { icon: MessageSquareText, title: "Clear and jargon-free", desc: "We explain everything in plain English, so you always know what's happening and why." },
+  { icon: CalendarCheck, title: "Reliable and deadline-focused", desc: "From VAT and CIS to payroll and property finance, we keep you compliant and organised — without last-minute stress." },
+  { icon: Briefcase, title: "Business and property expertise in one place", desc: "Whether you run a small business, work as a contractor or manage property, you receive practical, structured support tailored to your needs." },
+];
 
-
-const AboutPage = () =>
-<div className="flex flex-col">
+const AboutPage = () => (
+  <div className="flex flex-col">
     <section className="gradient-hero py-16">
       <div className="container mx-auto px-4 text-center">
         <motion.h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -38,9 +38,9 @@ const AboutPage = () =>
       <div className="container mx-auto max-w-3xl px-4 space-y-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <h2 className="font-heading text-2xl font-bold text-foreground mb-4">Who we are</h2>
-          <p className="text-muted-foreground leading-relaxed">ProGemz Finance & Business Support was founded with one simple goal: to take the stress out of accounting for small businesses, freelancers, contractors and property owners across the UK. We know that dealing with numbers, tax deadlines and HMRC can feel overwhelming — that's why we handle it all for you.
-
-        </p>
+          <p className="text-muted-foreground leading-relaxed">
+            ProGemz Business Services was founded with one simple goal: to take the stress out of accounting for small businesses, freelancers, contractors and property owners across the UK. We know that dealing with numbers, tax deadlines and HMRC can feel overwhelming — that's why we handle it all for you.
+          </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
             Whether you need monthly bookkeeping, VAT returns, CIS management, payroll or property accounting, we provide practical, reliable support so you can focus on what you do best — running your business.
           </p>
@@ -49,30 +49,30 @@ const AboutPage = () =>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1}>
           <h2 className="font-heading text-2xl font-bold text-foreground mb-6">What we stand for</h2>
           <div className="grid gap-6 sm:grid-cols-3">
-            {values.map((v, i) =>
-          <motion.div key={v.title} className="rounded-xl border border-border bg-card p-6 shadow-card text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+            {values.map((v, i) => (
+              <motion.div key={v.title} className="rounded-xl border border-border bg-card p-6 shadow-card text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                   <v.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-sm font-semibold text-foreground">{v.title}</h3>
                 <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
               </motion.div>
-          )}
+            ))}
           </div>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2}>
           <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Why Choose ProGemz?</h2>
           <div className="grid gap-6 sm:grid-cols-2">
-            {whyChoose.map((v, i) =>
-          <motion.div key={v.title} className="rounded-xl border border-border bg-card p-6 shadow-card text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+            {whyChoose.map((v, i) => (
+              <motion.div key={v.title} className="rounded-xl border border-border bg-card p-6 shadow-card text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                   <v.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-sm font-semibold text-foreground">{v.title}</h3>
                 <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
               </motion.div>
-          )}
+            ))}
           </div>
         </motion.div>
 
@@ -85,7 +85,7 @@ const AboutPage = () =>
         </motion.div>
       </div>
     </section>
-  </div>;
-
+  </div>
+);
 
 export default AboutPage;
