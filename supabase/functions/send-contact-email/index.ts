@@ -1,4 +1,4 @@
-import { Resend } from "npm:resend@4.1.2";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -15,7 +15,12 @@ Deno.serve(async (req) => {
     const { name, email, phone, company, message, businessType, services } =
       await req.json();
 
-    const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+    const smtpUser = Deno.env.get("ZOHO_SMTP_USER");
+    const smtpPass = Deno.env.get("ZOHO_SMTP_PASS");
+
+    if (!smtpUser || !smtpPass) {
+      throw new Error("ZOHO_SMTP_USER or ZOHO_SMTP_PASS not configured");
+    }
 
     const servicesList = services?.length
       ? services.join(", ")
@@ -34,21 +39,28 @@ Deno.serve(async (req) => {
       </table>
     `;
 
-    const { error } = await resend.emails.send({
-      from: "ProGemz Enquiry <onboarding@resend.dev>",
-      to: ["hello@progemz.com"],
+    const client = new SMTPClient({
+      connection: {
+        hostname: "smtp.zoho.com",
+        port: 465,
+        tls: true,
+        auth: {
+          username: smtpUser,
+          password: smtpPass,
+        },
+      },
+    });
+
+    await client.send({
+      from: smtpUser,
+      to: "hello@progemz.com",
       subject: `New Enquiry from ${name}`,
+      content: "auto",
       html: htmlBody,
       replyTo: email,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return new Response(JSON.stringify({ error: error.message }), {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
+    await client.close();
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
